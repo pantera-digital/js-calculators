@@ -1,4 +1,3 @@
-
 const calcTileGlue = {
     jQ: () => {},
     context: null,
