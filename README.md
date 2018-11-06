@@ -6,5 +6,8 @@
 
 ## Строительство и ремонт
 
-* [Калькулятор количества упаковок плиточного клея](https://pantera-digital.github.io/js-calculators/building/calcTileGlue/)
-* [Калькулятор количества плиток в зависимости от площади поверхности](https://pantera-digital.github.io/js-calculators/building/calcTileCount/)
+#### Калькулятор количества упаковок плиточного клея
+[Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/building/calcTileGlue) | [Демо](https://pantera-digital.github.io/js-calculators/building/calcTileGlue/)
+
+#### Калькулятор количества плиток в зависимости от площади поверхности
+[Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/building/calcTileCount) | [Демо](https://pantera-digital.github.io/js-calculators/building/calcTileCount/)
