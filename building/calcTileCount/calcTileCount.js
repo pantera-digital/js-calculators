@@ -3,7 +3,7 @@ const calcTileCount = {
     context: null,
     view: '<fieldset>' +
         '<legend>' +
-            'Поверхности' +
+            'Кол-во плиток' +
         '</legend>' +
         '<div>' +
             '<label for="unit">Единица измерения</label> ' +
