@@ -53,13 +53,13 @@ const calcTileCount = {
             unit = calcTileCount.context.find('#unit').val();
         let spcs = (long / unit) * (width / unit);
         let insqrm = 0;
-        if(spcs > 0) {
+        if (spcs > 0) {
             insqrm = 1 / spcs;    
         } 
         let need = square * insqrm;
         calcTileCount.context.find('#need').val(need.toFixed());
-        calcTileCount.context.find('#insqrm').val(Math.round(insqrm * 10) / 10);
-        calcTileCount.context.find('#spcs').val(Math.round(spcs * 10) / 10);
+        calcTileCount.context.find('#insqrm').val(Math.round(insqrm * 100) / 100);
+        calcTileCount.context.find('#spcs').val(Math.round(spcs * 100) / 100);
         return calcTileCount;
     },
     init:(selector) => {
