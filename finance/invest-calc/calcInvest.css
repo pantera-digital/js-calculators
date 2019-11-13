@@ -1,0 +1,76 @@
+#calcInvest label,
+#calcInvest input {
+    display: block;
+    width: 100%;
+}
+
+#calcInvest input {
+    text-align: center;
+    padding: 0;
+    margin-bottom: -3px;
+    position: absolute;
+    right: 10px;
+    margin-top: -5px;
+    margin-left: 10px;
+    width: 80px;
+}
+
+#calcInvest .calc-form {
+    /* ... */
+}
+
+#calcInvest .form-group {
+    margin-bottom: 30px;
+}
+
+#calcInvest .results {
+    line-height: 1.8em;
+    margin-top: 60px;
+}
+
+#calcInvest .result-row {
+    margin-bottom: 15px;
+}
+
+#calcInvest .result-value {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#calcInvest .noUi-tooltip {
+    display: none;
+    border: 0 none;
+    padding: 0 none;
+    color: #707070;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+#calcInvest .noUi-active .noUi-tooltip {
+    display: block;
+}
+
+#calcInvest .noUi-target.noUi-horizontal {
+    /**/
+}
+
+#calcInvest .noUi-connects {
+    /**/
+}
+
+#calcInvest .noUi-horizontal .noUi-handle {
+    /**/
+}
+
+#calcInvest .noUi-handle:before,
+#calcInvest .noUi-handle:after {
+    display: none
+}
+
+@media (max-width: 960px) {
+    #calcInvest > .row > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}

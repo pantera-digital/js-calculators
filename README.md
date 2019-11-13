@@ -11,3 +11,8 @@
 
 #### Калькулятор количества плиток в зависимости от площади поверхности
 [Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/building/calcTileCount) | [Демо](https://pantera-digital.github.io/js-calculators/building/calcTileCount/)
+
+## Финансы
+
+#### Калькулятор доходности инвестиций
+[Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/finance/invest-calc) | [Демо](https://pantera-digital.github.io/js-calculators/finance/invest-calc/)
