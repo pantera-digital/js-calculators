@@ -16,3 +16,6 @@
 
 #### Калькулятор доходности инвестиций
 [Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/finance/invest-calc) | [Демо](https://pantera-digital.github.io/js-calculators/finance/invest-calc/)
+
+#### Калькулятор заработка в интернете
+[Исходный код](https://github.com/pantera-digital/js-calculators/tree/master/finance/internet-money-make) | [Демо](https://pantera-digital.github.io/js-calculators/finance/internet-money-make/)
