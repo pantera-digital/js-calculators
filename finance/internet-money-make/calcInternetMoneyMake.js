@@ -1,7 +1,99 @@
 const calcInternetMoneyMake = {
     jQ: () => {},
     context: null,
-    view: '...',
+    view: `
+    <form>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel__title h3 text-center">Выберите способ заработка</div>
+                <div class="form-group">
+                    <select class="form-control input-lg" name="way">
+                        <option value="10">Отгадывание капчи</option>
+                        <option value="20">Клики по рекламе</option>
+                        <option value="30">Лайки в социальных сетях</option>
+                        <option value="45">Просмотр коротких видеороликов</option>
+                        <option value="60">Выполнение заданий на буксах</option>
+                        <option value="80">Прохождение платных опросов</option>
+                        <option value="100">Написание статей и текстов (копирайтинг)</option>
+                        <option value="150">Фриланс</option>
+                        <option value="180">Партнерские программы</option>
+                        <option value="200">Собственный сайт</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel__title h3 text-center">Выберите свой уровень пользователя</div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-3">
+                            <input class="sr-only" type="radio" name="options" id="option1" value="0.7" checked>
+                            <label class="options-label" for="option1">
+                                <img class="options-label__icon" src="lv1.png" alt="">
+                                <span>Новичок</span>
+                                <span class="options-label__info-icon"></span>
+                                <div class="options-label__info-tooltip">Новичок (ничего не слышал о заработке в интернете)</div>
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <input class="sr-only" type="radio" name="options" id="option2" value="1">
+                            <label class="options-label" for="option2">
+                                <img class="options-label__icon" src="lv2.png" alt="">
+                                <span>Опытный</span>
+                                <span class="options-label__info-icon"></span>
+                                <div class="options-label__info-tooltip">Опытный (уже имею начальное представление о заработке в интернете)</div>
+                            </label>
+                        </div>
+                        <div class="col-md-2">
+                            <input class="sr-only" type="radio" name="options" id="option3" value="2">
+                            <label class="options-label" for="option3">
+                                <img class="options-label__icon" src="lv3.png" alt="">
+                                <span>Эксперт</span>
+                                <span class="options-label__info-icon"></span>
+                                <div class="options-label__info-tooltip">Эксперт (все способы уже перепробовал, сам кого хочешь научу)</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel__title h3 text-center">Сколько часов в день вы планируете работать в интернете</div>
+                <div class="form-group">
+                    <input type="range" name="hours-range" min="1" max="24" step="1" value="8">
+                </div>
+                <div class="form-group">
+                    <input class="form-control input-lg" type="text" name="hours-text" min="1" max="24" step="1" value="8">
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel__title h3 text-center">Сколько дней в неделю вы планируете уделять работе в интернете</div>
+                <div class="form-group">
+                    <select class="form-control input-lg" name="days">
+                        <option value="1">1 день</option>
+                        <option value="2">2 дня</option>
+                        <option value="3">3 дня</option>
+                        <option value="4">4 дня</option>
+                        <option value="5">5 дней</option>
+                        <option value="6">6 дней</option>
+                        <option value="7">7 дней</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="panel__title h3 text-center">Ваш заработок за месяц составит</div>
+                <div class="form-group">
+                    <input class="form-control input-lg" type="text" name="result" disabled>
+                </div>
+            </div>
+        </div>
+    </form>`,
     renderForm:() => {
         calcInternetMoneyMake.context.append(calcInternetMoneyMake.view);
         return calcInternetMoneyMake;
@@ -10,13 +102,29 @@ const calcInternetMoneyMake = {
         calcInternetMoneyMake.context.find('input, select').on('change keyup mouseup', calcInternetMoneyMake.calc);
         return calcInternetMoneyMake;
     },
+    initSliders:() => {
+        let hoursRange = calcInternetMoneyMake.context.find('[name="hours-range"]');
+        let hoursText = calcInternetMoneyMake.context.find('[name="hours-text"]');
+        hoursRange.on('change', function() {
+            hoursText.val(hoursRange.val());
+        });
+        hoursText.on('change', function() {
+            hoursRange.val(hoursText.val());
+        });
+        return calcInternetMoneyMake;
+    },
     calc:() => {
-        let calcInternetMoneyMake = 'привет';
+        let way = calcInternetMoneyMake.context.find('[name="way"]').val();
+        let options = calcInternetMoneyMake.context.find('[name="options"]:checked').val();
+        let hours = calcInternetMoneyMake.context.find('[name="hours-range"]').val();
+        let days = calcInternetMoneyMake.context.find('[name="days"]').val();
+        let result = way * options * hours * days;
+        calcInternetMoneyMake.context.find('[name="result"]').val(result);
         return calcInternetMoneyMake;
     },
     init:(selector) => {
         calcInternetMoneyMake.context = calcInternetMoneyMake.jQ(selector);
-        calcInternetMoneyMake.renderForm().bindEvents().calc();
+        calcInternetMoneyMake.renderForm().initSliders().bindEvents().calc();
     },
 };
 
