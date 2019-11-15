@@ -28,6 +28,7 @@
 
 .imm-panel__select {
   width: 100%;
+  height: auto;
   padding: 10px 15px;
   background-color: #247ee5;
   color: #ffffff;
