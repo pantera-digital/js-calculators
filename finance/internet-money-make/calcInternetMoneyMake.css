@@ -149,14 +149,12 @@
 
 .imm-form__submit {
   background-color: #f4580e;
-  background-image: linear-gradient(to bottom, rgba(244,88,14,1) 0%, rgba(248,126,41,1) 100%);
   font-size: 24px;
   font-weight: 700;
   color: #ffffff;
   padding: 10px 25px;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 10px 20px 0 rgba(248, 126, 41, 0.45);
   margin: 30px auto 0;
   display: block;
   cursor: pointer;
@@ -165,14 +163,18 @@
 .red .imm-panel__select,
 .red .imm-panel__option-info-icon,
 .red .imm-panel__hours-text {
-  background-color: crimson;
+  background-color: #cc0000;
 }
 
 .red .imm-panel__option-label,
 .red .imm-panel__result {
-  color: crimson;
+  color: #cc0000;
 }
 
 .red .imm-panel__option-info-icon::after {
-  border-top-color: crimson;
+  border-top-color: #cc0000;
+}
+
+.red .imm-form__submit {
+  background-color: #9EB60A;
 }
